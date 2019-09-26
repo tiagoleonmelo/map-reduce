@@ -1,0 +1,27 @@
+var coordinator_8py =
+[
+    [ "main", "coordinator_8py.html#a697a188ca5dad37bc8b4cf37004b75d1", null ],
+    [ "recv_msg", "coordinator_8py.html#a97ee82748d57da5c9a530f25718a2bd4", null ],
+    [ "work", "coordinator_8py.html#a715737c3f0352e634cdefbe6a0bab689", null ],
+    [ "args", "coordinator_8py.html#ad119240bb082e93c26d55d64e59f8807", null ],
+    [ "backup_Q", "coordinator_8py.html#a2a6d2a62ae88687e71eacd59157cf263", null ],
+    [ "datefmt", "coordinator_8py.html#a84ab5cdb68b32b15533a2b7086f07f3f", null ],
+    [ "DEBUG", "coordinator_8py.html#a2bdbb8187563c9d6c6cd0153245ecb4a", null ],
+    [ "default", "coordinator_8py.html#ab1b597e85c457ed0d145e9ca3e711938", null ],
+    [ "dest", "coordinator_8py.html#a2250be9d000d9208088876b378fc2995", null ],
+    [ "format", "coordinator_8py.html#aaad52c16fb5c429af51ca4e7efd22ef8", null ],
+    [ "help", "coordinator_8py.html#a416f05142a20b6f22aaa9acd745f489a", null ],
+    [ "index", "coordinator_8py.html#a6121d22e7d86bde51c7314484ff2565d", null ],
+    [ "int", "coordinator_8py.html#a48684a900422aaed59ba19afacc00ee1", null ],
+    [ "level", "coordinator_8py.html#ab6eed70e7ef73cb13fdbfa27acd319a0", null ],
+    [ "listList", "coordinator_8py.html#a2f0f05fb64de5abd118bf6a9223c3528", null ],
+    [ "logger", "coordinator_8py.html#a4dde360bc566ef6b7760b664f856e5c0", null ],
+    [ "parser", "coordinator_8py.html#ab07a56cc0fe7d3ecb9ea279151d9051f", null ],
+    [ "recv_q", "coordinator_8py.html#adf5f28d7aecdf1af5d278db2eb7ede13", null ],
+    [ "request_table", "coordinator_8py.html#a9ca3f06a7e10bdf30d6d40abd158ec20", null ],
+    [ "type", "coordinator_8py.html#aa3688d0ae0b2ba17e08edb4880feb6ad", null ],
+    [ "unprocs", "coordinator_8py.html#a0b3c7c40b631e2fe67010515963dd28b", null ],
+    [ "wordList", "coordinator_8py.html#ab53e858ba90a46431dc2c883c49f5075", null ],
+    [ "worker_Q", "coordinator_8py.html#a85738412bb78067ac0e9c1ad2f4d6c6a", null ],
+    [ "workers", "coordinator_8py.html#a04186db11ae40d86d877171a923746f7", null ]
+];

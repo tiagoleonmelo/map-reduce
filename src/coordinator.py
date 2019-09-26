@@ -1,8 +1,7 @@
 # coding: utf-8
-# -*- coding: utf-8 -*-
-
-# TODO:
-#   Posso ter um backup que começa do inicio? - no, use indexes to represent and save states
+## @package coordinator
+# Responsible for distributing work between other slave
+# processes
 
 import json
 import sys
@@ -21,12 +20,20 @@ from utils import getKey, Diff, tokenizer
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',datefmt='%m-%d %H:%M:%S')
 logger = logging.getLogger('coordinator')
 
-wordList=[]         # array of usable blobs
-listList=[]         # array of lists
+## Array of usable blobs
+wordList=[]
+
+## Array of lists 
+# Very cool
+# Very well documented       
+listList=[]         
 index = -1
 
-workers=[]          # used to iterate and broadcast msgs (like backup addresses)
-worker_Q = Queue()  # used to request work
+## Array of workers, used to iterate and broadcast msgs (like backup addresses)
+workers=[]
+
+## Worker queue used to request work
+worker_Q = Queue()  
 
 recv_q = Queue()    # usual inbox queue
 
