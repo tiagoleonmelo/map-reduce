@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['coordinator_0',['coordinator',['../namespacecoordinator.html',1,'']]]
+  ['backup_5fq_0',['backup_Q',['../namespacecoordinator.html#a2a6d2a62ae88687e71eacd59157cf263',1,'coordinator']]]
 ];

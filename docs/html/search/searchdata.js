@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "clw",
+  0: "bclrw",
   1: "c",
-  2: "lw"
+  2: "r",
+  3: "blrw"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "namespaces",
-  2: "variables"
+  2: "functions",
+  3: "variables"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Namespaces",
-  2: "Variables"
+  2: "Functions",
+  3: "Variables"
 };
 

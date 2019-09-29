@@ -23,9 +23,7 @@ logger = logging.getLogger('coordinator')
 ## Array of usable blobs
 wordList=[]
 
-## Array of lists 
-# Very cool
-# Very well documented       
+## Array of lists  
 listList=[]         
 index = -1
 
@@ -35,13 +33,22 @@ workers=[]
 ## Worker queue used to request work
 worker_Q = Queue()  
 
-recv_q = Queue()    # usual inbox queue
+## Inbox queue used for incoming messages
+recv_q = Queue()    
 
-backup_Q = Queue()  # we are using a queue and not just a var in case we wanna scale to multiple backups later
-request_table = {}  # dictionary holding the latest request and to who it was requested
-unprocs = []        # lists of requests that were never returned
+## We are using a queue to store backups
+# and not just a var in case we wish to scale to multiple backups later
+backup_Q = Queue()
 
-def recv_msg(c):    # thread that will handle receiving messages from connection c
+## Dictionary holding the latest request 
+# and to who it was requested, to allow error recovery
+request_table = {}  
+
+# List of requests that were never returned (unprocessed)
+unprocs = []        
+
+## Thread that will handle receiving messages from connection c
+def recv_msg(c):    
     global backup_Q
     global worker_Q
     global request_table
@@ -53,10 +60,6 @@ def recv_msg(c):    # thread that will handle receiving messages from connection
     id = -1         # local variable that holds the id of this thread's connection
 
     while True:
-
-        # first receive size of the msg
-        # size = c.recv(40)
-        # data received from client
 
         try:
             data = c.recv(40960000)
@@ -86,10 +89,11 @@ def recv_msg(c):    # thread that will handle receiving messages from connection
         if str_req['task']=='register':
             logger.debug('Registering a new worker')
             workers.append(c)
-            id = workers.index(c)   # id is assigned by the coordinator and its the index of the new worker
+            ## id is assigned by the coordinator and its the index of the new worker
+            id = workers.index(c)   
             worker_Q.put(c)
 
-            # tell the new worker about the backup if it exists
+            ## Tell the new worker about the backup (if it exists)
             if backup_Q.qsize() > 0:
                 tpl = backup_Q.get()
                 j = {'task':'backup_update','c':tpl}
@@ -102,19 +106,23 @@ def recv_msg(c):    # thread that will handle receiving messages from connection
             logger.debug('Registering a new backup coordinator')
             tpl = (str_req['addr'],str_req['port'])
             id = 'BACKUP'
-            # Backup has to know: state of wordList (index), unprocessed requests, state of listList
+            ## @note
+            # Backup has to know: 
+            # state of wordList (index), unprocessed requests, state of listList
             j = {'task':'reg_ack', 'index': index, 'listList':listList}
             json_msg=json.dumps(j).encode('latin-1')
             c.send(json_msg)
             backup_Q.put(tpl)
 
-            # telling workers about the backup
+            ## Telling workers about the backup
             j = {'task':'backup_update','c':tpl}
             json_msg=json.dumps(j).encode('latin-1')
-            for w in workers:       # broadcast the backup address
+
+            ## Broadcasting the backup address
+            for w in workers:       
                 w.send(json_msg)
 
-            # screw heartbeats, we will send requests and theyll work like hb's
+            ## Instead of using heartbeats, we will send requests and theyll work like heartbeats
             global reply_q
             reply_q = Queue()
 

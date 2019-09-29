@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['wordlist_2',['wordList',['../namespacecoordinator.html#ab53e858ba90a46431dc2c883c49f5075',1,'coordinator']]],
-  ['worker_5fq_3',['worker_Q',['../namespacecoordinator.html#a85738412bb78067ac0e9c1ad2f4d6c6a',1,'coordinator']]],
-  ['workers_4',['workers',['../namespacecoordinator.html#a04186db11ae40d86d877171a923746f7',1,'coordinator']]]
+  ['listlist_2',['listList',['../namespacecoordinator.html#a2f0f05fb64de5abd118bf6a9223c3528',1,'coordinator']]]
 ];

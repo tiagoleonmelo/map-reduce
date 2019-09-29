@@ -72,7 +72,8 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a97ee82748d57da5c9a530f25718a2bd4"><td class="memItemLeft" align="right" valign="top"><a id="a97ee82748d57da5c9a530f25718a2bd4"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>recv_msg</b> (c)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a97ee82748d57da5c9a530f25718a2bd4">recv_msg</a> (c)</td></tr>
+<tr class="memdesc:a97ee82748d57da5c9a530f25718a2bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread that will handle receiving messages from connection c. <br /></td></tr>
 <tr class="separator:a97ee82748d57da5c9a530f25718a2bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a715737c3f0352e634cdefbe6a0bab689"><td class="memItemLeft" align="right" valign="top"><a id="a715737c3f0352e634cdefbe6a0bab689"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>work</b> ()</td></tr>
@@ -104,7 +105,7 @@ list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="separator:ab53e858ba90a46431dc2c883c49f5075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0f05fb64de5abd118bf6a9223c3528"><td class="memItemLeft" align="right" valign="top"><a id="a2f0f05fb64de5abd118bf6a9223c3528"></a>
 list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a2f0f05fb64de5abd118bf6a9223c3528">listList</a> = []</td></tr>
-<tr class="memdesc:a2f0f05fb64de5abd118bf6a9223c3528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of lists Very cool Very well documented <br  />
+<tr class="memdesc:a2f0f05fb64de5abd118bf6a9223c3528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of lists <br  />
  <br /></td></tr>
 <tr class="separator:a2f0f05fb64de5abd118bf6a9223c3528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6121d22e7d86bde51c7314484ff2565d"><td class="memItemLeft" align="right" valign="top"><a id="a6121d22e7d86bde51c7314484ff2565d"></a>
@@ -119,13 +120,16 @@ list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memdesc:a85738412bb78067ac0e9c1ad2f4d6c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worker queue used to request work. <br /></td></tr>
 <tr class="separator:a85738412bb78067ac0e9c1ad2f4d6c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf5f28d7aecdf1af5d278db2eb7ede13"><td class="memItemLeft" align="right" valign="top"><a id="adf5f28d7aecdf1af5d278db2eb7ede13"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>recv_q</b> = Queue()</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#adf5f28d7aecdf1af5d278db2eb7ede13">recv_q</a> = Queue()</td></tr>
+<tr class="memdesc:adf5f28d7aecdf1af5d278db2eb7ede13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inbox queue used for incoming messages. <br /></td></tr>
 <tr class="separator:adf5f28d7aecdf1af5d278db2eb7ede13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6d2a62ae88687e71eacd59157cf263"><td class="memItemLeft" align="right" valign="top"><a id="a2a6d2a62ae88687e71eacd59157cf263"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>backup_Q</b> = Queue()</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a2a6d2a62ae88687e71eacd59157cf263">backup_Q</a> = Queue()</td></tr>
+<tr class="memdesc:a2a6d2a62ae88687e71eacd59157cf263"><td class="mdescLeft">&#160;</td><td class="mdescRight">We are using a queue to store backups and not just a var in case we wish to scale to multiple backups later. <br /></td></tr>
 <tr class="separator:a2a6d2a62ae88687e71eacd59157cf263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ca3f06a7e10bdf30d6d40abd158ec20"><td class="memItemLeft" align="right" valign="top"><a id="a9ca3f06a7e10bdf30d6d40abd158ec20"></a>
-dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>request_table</b> = {}</td></tr>
+dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a9ca3f06a7e10bdf30d6d40abd158ec20">request_table</a> = {}</td></tr>
+<tr class="memdesc:a9ca3f06a7e10bdf30d6d40abd158ec20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary holding the latest request and to who it was requested, to allow error recovery. <br /></td></tr>
 <tr class="separator:a9ca3f06a7e10bdf30d6d40abd158ec20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b3c7c40b631e2fe67010515963dd28b"><td class="memItemLeft" align="right" valign="top"><a id="a0b3c7c40b631e2fe67010515963dd28b"></a>
 list&#160;</td><td class="memItemRight" valign="bottom"><b>unprocs</b> = []</td></tr>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['format_9',['format',['../namespacecoordinator.html#aaad52c16fb5c429af51ca4e7efd22ef8',1,'coordinator.format()'],['../namespaceworker.html#a1d546dd73fe295c2b42e99419c50bf75',1,'worker.format()']]]
+  ['wordlist_6',['wordList',['../namespacecoordinator.html#ab53e858ba90a46431dc2c883c49f5075',1,'coordinator']]],
+  ['worker_5fq_7',['worker_Q',['../namespacecoordinator.html#a85738412bb78067ac0e9c1ad2f4d6c6a',1,'coordinator']]],
+  ['workers_8',['workers',['../namespacecoordinator.html#a04186db11ae40d86d877171a923746f7',1,'coordinator']]]
 ];
