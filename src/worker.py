@@ -11,6 +11,9 @@ import time
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',datefmt='%m-%d %H:%M:%S')
 logger = logging.getLogger('worker')
 
+## A worker process lifecycle
+# Essentially, it receives messages from the coordinator telling it what sort of work he should do
+# Furthermore, if the coordinator dies, he receives their backup address and attempts to connect to it
 def main(args):
     logger.debug('Connecting to %s:%d', args.hostname, args.port)
     sock = socket(AF_INET, SOCK_STREAM)

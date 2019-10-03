@@ -1,7 +1,8 @@
 # coding: utf-8
 ## @package coordinator
-# Responsible for distributing work between other slave
-# processes
+# Responsible for distributing work between other slave processes
+# Syncing with the backup is done through short, heartbeat-like messages, containing the backup data.
+
 
 import json
 import sys
@@ -191,6 +192,9 @@ def recv_msg(c):
 
     c.close()
 
+## Thread that will distribute requests between workers
+# it will handle blob-splitting and distributing the blobs
+# to be replaced
 def work():
 
     start_time = time.time()
