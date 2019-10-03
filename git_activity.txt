@@ -1,0 +1,15 @@
+* 9961e57 (HEAD -> master, origin/master, origin/doc-branch, doc-branch) More detailed documentation as well as html tags for better readability
+* 008e7b1 (origin/cleaning-up-dirs, cleaning-up-dirs) Structure update
+* 03a5aec Worker and utils documentation
+* 43355fe Docs on most coord.py variables
+*   c13cd75 Merge branch 'master' of https://github.com/tiagoleonmelo/map-reduce
+|\  
+| * 067a6d3 folder structure
+* | b480ea5 Initial docs
+|/  
+*   f388aea Merge branch 'cleaning-up-dirs' of https://github.com/tiagoleonmelo/map-reduce
+|\  
+| * aef0f7b Docs and Src folder
+* | d8efb3e README
+|/  
+* ca6b31d Initial Commit
