@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['str_66',['str',['../namespaceworker.html#a522dcf20446e4fbef56a8cc7f2f9f7f3',1,'worker']]]
+  ['type_61',['type',['../namespacecoordinator.html#aa3688d0ae0b2ba17e08edb4880feb6ad',1,'coordinator.type()'],['../namespaceworker.html#ae3e8ce13e6baaccfa40018d235f24c38',1,'worker.type()']]]
 ];

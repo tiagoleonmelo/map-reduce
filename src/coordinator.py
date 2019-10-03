@@ -1,8 +1,8 @@
 # coding: utf-8
-# @package coordinator
-# Responsible for distributing work between other slave processes
-# Syncing with the backup is done through short, heartbeat-like messages, containing the backup data.
-
+## @package coordinator
+# <h2>A master process responsible for distributing work between other slave processes.</h2> <br>
+# Syncing with the backup is done through short, heartbeat-like messages,
+# containing the data that needs to be backed up
 
 import json
 import sys
@@ -22,36 +22,44 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s', datefmt='%m-%d %H:%M:%S')
 logger = logging.getLogger('coordinator')
 
-# Array of usable blobs
+## Array of usable blobs
 wordList = []
 
-# Array of lists
+## Array of lists
 listList = []
 index = -1
 
-# Array of workers, used to iterate and broadcast msgs (like backup addresses)
+## Array of workers, used to iterate and broadcast msgs (like backup addresses)
 workers = []
 
-# Worker queue used to request work
+## Worker queue used to request work
 worker_Q = Queue()
 
-# Inbox queue used for incoming messages
+## Inbox queue used for incoming messages
 recv_q = Queue()
 
-# We are using a queue to store backups
+## We are using a queue to store backups
 # and not just a var in case we wish to scale to multiple backups later
 backup_Q = Queue()
 
-# Dictionary holding the latest request
+## Dictionary holding the latest request
 # and to who it was requested, to allow error recovery
 request_table = {}
 
-# List of requests that were never returned (unprocessed)
+## List of requests that were never returned (unprocessed)
 unprocs = []
 
-# Thread that will handle receiving messages from connection c
 
-
+## Thread that will handle receiving messages from connection c. <br>
+# There are 5 different tasks a coordinator can handle: <br>
+#       > size: figure out whats the size of the next incoming message and adapt <br>
+#       > register: register a new available worker <br>
+#       > backup_register: register a new backup, with who this coordinator will sync <br>
+#       > map_reply: receiving output for a map_request <br>
+#       > reduce_reply: receiving output for a reduce_request <br>
+#       > reg_ack: acknowledging this coordinator is now backup <br>
+# Moreover, if c should die without replying to its latest request, coordinator appends
+# it to a list of unprocessed requests that will be handled later
 def recv_msg(c):
     global backup_Q
     global worker_Q
@@ -193,11 +201,13 @@ def recv_msg(c):
 
     c.close()
 
-# Thread that will distribute requests between workers
-# it will handle blob-splitting and distributing the blobs
-# to be replaced
 
-
+## Thread that will distribute requests between workers.
+# It will handle blob splitting and distributing the blobs soon to be mapped by workers
+# Once every blob has been mapped, the coordinator requests available workers to reduce
+# the now mapped blobs. <br>
+# Essentially, we iterate over a list of blobs, map it to a list of mapped blobs and then
+# iterate over that list, requesting reduces to each of its items
 def work():
 
     start_time = time.time()
@@ -434,6 +444,12 @@ def work():
                 elapsed_time, len(listList[0]))
 
 
+## <b>Driver code</b> <br>
+# Besides launching threads, the main function is also responsible for managing
+# connections. If a new connection should arrive, depending on the register request it sends,
+# this coordinator will acknowledge a new backup or worker.
+# Furthermore, should this coordinator be a backup and the master die, the main function 
+# takes care of "promoting" this process to master and taking it from there
 def main(args):
     datastore = []  # setting up the blobs
     with args.file as f:

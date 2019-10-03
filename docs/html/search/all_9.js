@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_17',['main',['../namespacecoordinator.html#a697a188ca5dad37bc8b4cf37004b75d1',1,'coordinator.main()'],['../namespaceworker.html#aea5d899a312a233d6b87938160802036',1,'worker.main()']]]
+  ['unprocs_12',['unprocs',['../namespacecoordinator.html#a0b3c7c40b631e2fe67010515963dd28b',1,'coordinator']]],
+  ['utils_13',['utils',['../namespaceutils.html',1,'']]]
 ];

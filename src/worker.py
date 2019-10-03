@@ -1,4 +1,9 @@
 # coding: utf-8
+## @package worker
+# <h2>A slave process that handles requests sent by the coordinator</h2>
+# Essentially, it receives messages from the coordinator telling it what sort of work he should do<br>
+# Furthermore, if the coordinator dies, if given a backup address during the coordinator's lifespan
+# he will attempt to connect to it
 
 import json
 import logging
@@ -11,10 +16,6 @@ import time
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s', datefmt='%m-%d %H:%M:%S')
 logger = logging.getLogger('worker')
-
-# A worker process lifecycle
-# Essentially, it receives messages from the coordinator telling it what sort of work he should do
-# Furthermore, if the coordinator dies, he receives their backup address and attempts to connect to it
 
 
 def main(args):

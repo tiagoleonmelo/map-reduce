@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Map Reduce: coordinator Namespace Reference</title>
+<title>Distributed Map Reduce algorithm - Python: coordinator Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Map Reduce
+   <div id="projectname">Distributed Map Reduce algorithm - Python
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Implementing the map/reduce algorithm using different processes that act like different machines, simulating a distributed environment</div>
   </td>
  </tr>
  </tbody>
@@ -71,16 +73,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a97ee82748d57da5c9a530f25718a2bd4"><td class="memItemLeft" align="right" valign="top"><a id="a97ee82748d57da5c9a530f25718a2bd4"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a97ee82748d57da5c9a530f25718a2bd4">recv_msg</a> (c)</td></tr>
-<tr class="memdesc:a97ee82748d57da5c9a530f25718a2bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread that will handle receiving messages from connection c. <br /></td></tr>
+<tr class="memitem:a97ee82748d57da5c9a530f25718a2bd4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a97ee82748d57da5c9a530f25718a2bd4">recv_msg</a> (c)</td></tr>
+<tr class="memdesc:a97ee82748d57da5c9a530f25718a2bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread that will handle receiving messages from connection c.  <a href="namespacecoordinator.html#a97ee82748d57da5c9a530f25718a2bd4">More...</a><br /></td></tr>
 <tr class="separator:a97ee82748d57da5c9a530f25718a2bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715737c3f0352e634cdefbe6a0bab689"><td class="memItemLeft" align="right" valign="top"><a id="a715737c3f0352e634cdefbe6a0bab689"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a715737c3f0352e634cdefbe6a0bab689">work</a> ()</td></tr>
-<tr class="memdesc:a715737c3f0352e634cdefbe6a0bab689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread that will distribute requests between workers it will handle blob-splitting and distributing the blobs to be replaced. <br /></td></tr>
+<tr class="memitem:a715737c3f0352e634cdefbe6a0bab689"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a715737c3f0352e634cdefbe6a0bab689">work</a> ()</td></tr>
+<tr class="memdesc:a715737c3f0352e634cdefbe6a0bab689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread that will distribute requests between workers.  <a href="namespacecoordinator.html#a715737c3f0352e634cdefbe6a0bab689">More...</a><br /></td></tr>
 <tr class="separator:a715737c3f0352e634cdefbe6a0bab689"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697a188ca5dad37bc8b4cf37004b75d1"><td class="memItemLeft" align="right" valign="top"><a id="a697a188ca5dad37bc8b4cf37004b75d1"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (args)</td></tr>
+<tr class="memitem:a697a188ca5dad37bc8b4cf37004b75d1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a697a188ca5dad37bc8b4cf37004b75d1">main</a> (args)</td></tr>
+<tr class="memdesc:a697a188ca5dad37bc8b4cf37004b75d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Driver code</b> <br  />
+ Besides launching the above threads, the main function is also responsible for managing connections.  <a href="namespacecoordinator.html#a697a188ca5dad37bc8b4cf37004b75d1">More...</a><br /></td></tr>
 <tr class="separator:a697a188ca5dad37bc8b4cf37004b75d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -88,9 +89,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ab6eed70e7ef73cb13fdbfa27acd319a0"><td class="memItemLeft" align="right" valign="top"><a id="ab6eed70e7ef73cb13fdbfa27acd319a0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>level</b></td></tr>
 <tr class="separator:ab6eed70e7ef73cb13fdbfa27acd319a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bdbb8187563c9d6c6cd0153245ecb4a"><td class="memItemLeft" align="right" valign="top"><a id="a2bdbb8187563c9d6c6cd0153245ecb4a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DEBUG</b></td></tr>
-<tr class="separator:a2bdbb8187563c9d6c6cd0153245ecb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad52c16fb5c429af51ca4e7efd22ef8"><td class="memItemLeft" align="right" valign="top"><a id="aaad52c16fb5c429af51ca4e7efd22ef8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>format</b></td></tr>
 <tr class="separator:aaad52c16fb5c429af51ca4e7efd22ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,8 +104,7 @@ list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="separator:ab53e858ba90a46431dc2c883c49f5075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0f05fb64de5abd118bf6a9223c3528"><td class="memItemLeft" align="right" valign="top"><a id="a2f0f05fb64de5abd118bf6a9223c3528"></a>
 list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a2f0f05fb64de5abd118bf6a9223c3528">listList</a> = []</td></tr>
-<tr class="memdesc:a2f0f05fb64de5abd118bf6a9223c3528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of lists <br  />
- <br /></td></tr>
+<tr class="memdesc:a2f0f05fb64de5abd118bf6a9223c3528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of lists. <br /></td></tr>
 <tr class="separator:a2f0f05fb64de5abd118bf6a9223c3528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6121d22e7d86bde51c7314484ff2565d"><td class="memItemLeft" align="right" valign="top"><a id="a6121d22e7d86bde51c7314484ff2565d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> = -1</td></tr>
@@ -133,7 +130,8 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memdesc:a9ca3f06a7e10bdf30d6d40abd158ec20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary holding the latest request and to who it was requested, to allow error recovery. <br /></td></tr>
 <tr class="separator:a9ca3f06a7e10bdf30d6d40abd158ec20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b3c7c40b631e2fe67010515963dd28b"><td class="memItemLeft" align="right" valign="top"><a id="a0b3c7c40b631e2fe67010515963dd28b"></a>
-list&#160;</td><td class="memItemRight" valign="bottom"><b>unprocs</b> = []</td></tr>
+list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecoordinator.html#a0b3c7c40b631e2fe67010515963dd28b">unprocs</a> = []</td></tr>
+<tr class="memdesc:a0b3c7c40b631e2fe67010515963dd28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of requests that were never returned (unprocessed) <br /></td></tr>
 <tr class="separator:a0b3c7c40b631e2fe67010515963dd28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07a56cc0fe7d3ecb9ea279151d9051f"><td class="memItemLeft" align="right" valign="top"><a id="ab07a56cc0fe7d3ecb9ea279151d9051f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>parser</b> = argparse.ArgumentParser(description='MapReduce Coordinator')</td></tr>
@@ -144,9 +142,6 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>unprocs</b> = []</td>
 <tr class="memitem:aa3688d0ae0b2ba17e08edb4880feb6ad"><td class="memItemLeft" align="right" valign="top"><a id="aa3688d0ae0b2ba17e08edb4880feb6ad"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:aa3688d0ae0b2ba17e08edb4880feb6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48684a900422aaed59ba19afacc00ee1"><td class="memItemLeft" align="right" valign="top"><a id="a48684a900422aaed59ba19afacc00ee1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>int</b></td></tr>
-<tr class="separator:a48684a900422aaed59ba19afacc00ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a416f05142a20b6f22aaa9acd745f489a"><td class="memItemLeft" align="right" valign="top"><a id="a416f05142a20b6f22aaa9acd745f489a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>help</b></td></tr>
 <tr class="separator:a416f05142a20b6f22aaa9acd745f489a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +153,83 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>unprocs</b> = []</td>
 <tr class="separator:ad119240bb082e93c26d55d64e59f8807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Responsible for distributing work between other slave processes Syncing with the backup is done through short, heartbeat-like messages, containing the backup data. </p>
-</div></div><!-- contents -->
+<div class="textblock"><h2>A master process responsible for distributing work between other slave processes.</h2>
+<p><br  />
+ Syncing with the backup is done through short, heartbeat-like messages, containing the data that needs to be backed up </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a697a188ca5dad37bc8b4cf37004b75d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697a188ca5dad37bc8b4cf37004b75d1">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def coordinator.main </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Driver code</b> <br  />
+ Besides launching the above threads, the main function is also responsible for managing connections. </p>
+<p>If a new connection should arrive, depending on the register request it sends, this coordinator will acknowledge a new backup or worker. Furthermore, should this coordinator be a backup and the master die, the main function takes care of "promoting" this process to master and taking it from there </p>
+
+</div>
+</div>
+<a id="a97ee82748d57da5c9a530f25718a2bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ee82748d57da5c9a530f25718a2bd4">&#9670;&nbsp;</a></span>recv_msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def coordinator.recv_msg </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread that will handle receiving messages from connection c. </p>
+<p><br  />
+ There are 5 different tasks a coordinator can handle: <br  />
+ &gt; size: figure out whats the size of the next incoming message and adapt <br  />
+ &gt; register: register a new available worker <br  />
+ &gt; backup_register: register a new backup, with who this coordinator will sync <br  />
+ &gt; map_reply: receiving output for a map_request <br  />
+ &gt; reduce_reply: receiving output for a reduce_request <br  />
+ &gt; reg_ack: acknowledging this coordinator is now backup <br  />
+ Moreover, if c should die without replying to its latest request, coordinator appends it to a list of unprocessed requests that will be handled later </p>
+
+</div>
+</div>
+<a id="a715737c3f0352e634cdefbe6a0bab689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715737c3f0352e634cdefbe6a0bab689">&#9670;&nbsp;</a></span>work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def coordinator.work </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread that will distribute requests between workers. </p>
+<p>It will handle blob splitting and distributing the blobs soon to be mapped by workers Once every blob has been mapped, the coordinator requests available workers to reduce the now mapped blobs. <br  />
+ Essentially, we iterate over a list of blobs, map it to a list of mapped blobs and then iterate over that list, requesting reduces to each of its items </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

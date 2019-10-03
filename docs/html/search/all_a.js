@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['parser_18',['parser',['../namespacecoordinator.html#ab07a56cc0fe7d3ecb9ea279151d9051f',1,'coordinator.parser()'],['../namespaceworker.html#ac3f1cf1cd623b2d442cbf77c476f973b',1,'worker.parser()']]]
+  ['wordlist_14',['wordList',['../namespacecoordinator.html#ab53e858ba90a46431dc2c883c49f5075',1,'coordinator']]],
+  ['work_15',['work',['../namespacecoordinator.html#a715737c3f0352e634cdefbe6a0bab689',1,'coordinator']]],
+  ['worker_16',['worker',['../namespaceworker.html',1,'']]],
+  ['worker_5fq_17',['worker_Q',['../namespacecoordinator.html#a85738412bb78067ac0e9c1ad2f4d6c6a',1,'coordinator']]],
+  ['workers_18',['workers',['../namespacecoordinator.html#a04186db11ae40d86d877171a923746f7',1,'coordinator']]]
 ];
