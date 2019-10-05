@@ -1,4 +1,9 @@
-* 9961e57 (HEAD -> master, origin/master, origin/doc-branch, doc-branch) More detailed documentation as well as html tags for better readability
+* eb499f0 (HEAD -> master, origin/master) Readme fix
+* ff26a6b Readme update
+* 1a5de85 Small code changes for docker compatibility
+* 620a672 Scripts folder
+* 227b67f Git activity log
+* 9961e57 (origin/doc-branch, doc-branch) More detailed documentation as well as html tags for better readability
 * 008e7b1 (origin/cleaning-up-dirs, cleaning-up-dirs) Structure update
 * 03a5aec Worker and utils documentation
 * 43355fe Docs on most coord.py variables
