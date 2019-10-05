@@ -120,6 +120,13 @@ def main(args):
                 backup = str_req['c']
                 logger.info("Acknowledged the backup address")
 
+            elif str_req['task'] == 'die':
+                j = {"task": "die", "value": val}
+                json_msg = json.dumps(j).encode('latin-1')
+
+                sock.send(json_msg)
+                sys.exit()
+
             else:
                 logger.debug('Error: Unrecognized operation')
 

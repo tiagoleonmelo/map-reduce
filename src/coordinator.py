@@ -12,8 +12,10 @@ import logging
 import argparse
 import time
 import re
+import os
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 from _thread import *
+import _thread
 from queue import Queue
 import threading
 from utils import getKey, Diff, tokenizer
@@ -195,6 +197,9 @@ def recv_msg(c):
 
             json_msg = json.dumps(j).encode('latin-1')
             sent = c.send(json_msg)
+
+        elif str_req['task'] == 'die':
+            os._exit(0)
 
     global break_flag   # flag that will allow the backup to start working
     break_flag = True
@@ -442,6 +447,14 @@ def work():
 
     logger.info("Elapsed time: %s; Length of the final list: %s",
                 elapsed_time, len(listList[0]))
+
+    j = {"task": 'die'}
+    json_msg = json.dumps(j).encode('latin-1')
+    c = worker_Q.get(timeout=2)
+    c.send(json_msg)
+
+    os._exit(0)
+
 
 
 ## <b>Driver code</b> <br>
